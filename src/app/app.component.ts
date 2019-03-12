@@ -22,12 +22,16 @@ export class AppComponent {
     }
   ];
 
+  userName;
+  isLoggedIn: any = false;
+
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
   ) {
     this.initializeApp();
+    this.getUserDetails();
   }
 
   initializeApp() {
@@ -35,5 +39,9 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+
+  getUserDetails() {
+    this.userName = 'User';
   }
 }
