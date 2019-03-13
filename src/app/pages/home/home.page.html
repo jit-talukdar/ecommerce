@@ -1,44 +1,141 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Home
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Home
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button>
+              <ion-badge color="secondary">1</ion-badge>
+              <ion-icon slot="icon-only" name="cart"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-card class="welcome-card">
-      <ion-img src="/assets/shapes.svg"></ion-img>
-      <ion-card-header>
-        <ion-card-subtitle>Get Started</ion-card-subtitle>
-        <ion-card-title>Welcome to Ionic</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-list lines="none">
-      <ion-list-header>
-        <ion-label>Resources</ion-label>
-      </ion-list-header>
-      <ion-item href="https://ionicframework.com/docs/">
-        <ion-icon slot="start" color="medium" name="book"></ion-icon>
-        <ion-label>Ionic Documentation</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-        <ion-icon slot="start" color="medium" name="build"></ion-icon>
-        <ion-label>Scaffold Out Your App</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/layout/structure">
-        <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-        <ion-label>Change Your App Layout</ion-label>
-      </ion-item>
-      <ion-item href="https://ionicframework.com/docs/theming/basics">
-        <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-        <ion-label>Theme Your App</ion-label>
-      </ion-item>
-    </ion-list>
+<ion-content no-padding>
+    <!-- START -- Image Slider -->
+    <ion-slides pager="true" [options]="slideOpts">
+        <ion-slide>
+            <img src="assets/sliders/slide1.jpg" style="max-height: 350px;" height="350">
+        </ion-slide>
+        <ion-slide>
+            <img src="assets/sliders/slide2.jpg" style="max-height: 350px;" height="350">
+        </ion-slide>
+    </ion-slides>
+    <!-- END -- Image Slider -->
+    
+    <!-- START - Sliding Content -->
+    <!-- START - Item Divider -->
+    <ion-item-divider color="light">
+        <ion-label>Trending</ion-label>
+        <ion-button size="small" slot="end" color="secondary" fill="outline">View</ion-button>
+      </ion-item-divider>
+    <!-- END - Item Divider -->
+    <!-- START - Sliding Content -->
+    <ion-slides no-padding [options]="sliderConfig">
+      <ion-slide>
+        <div>
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>
+                Test Product - 250
+              </ion-card-title>
+              <ion-card-content>
+                <img src="https://via.placeholder.com/300x300">
+                <ion-button expand="full">Add to Cart</ion-button>
+              </ion-card-content>
+            </ion-card-header>
+          </ion-card>
+        </div>
+      </ion-slide>
+      <ion-slide>
+          <div>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>
+                  Test Product - 250
+                </ion-card-title>
+                <ion-card-content>
+                  <img src="https://via.placeholder.com/300x300">
+                  <ion-button expand="full">Add to Cart</ion-button>
+                </ion-card-content>
+              </ion-card-header>
+            </ion-card>
+          </div>
+      </ion-slide>
+      <ion-slide>
+          <div>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>
+                  Test Product - 250
+                </ion-card-title>
+                <ion-card-content>
+                  <img src="https://via.placeholder.com/300x300">
+                  <ion-button expand="full">Add to Cart</ion-button>
+                </ion-card-content>
+              </ion-card-header>
+            </ion-card>
+          </div>
+      </ion-slide>
+    </ion-slides>
+    <!-- END - Sliding Content -->
+    <!-- START - Item Divider -->
+    <ion-item-divider color="light">
+        <ion-label>Trending</ion-label>
+        <ion-button size="small" slot="end" color="secondary" fill="outline">View</ion-button>
+      </ion-item-divider>
+    <!-- END - Item Divider -->
+    <!-- START - Sliding Content -->
+      <ion-slides no-padding [options]="sliderConfig">
+        <ion-slide>
+          <div>
+            <ion-card>
+              <ion-card-header>
+                <ion-card-title>
+                  Test Product - 250
+                </ion-card-title>
+                <ion-card-content>
+                  <img src="https://via.placeholder.com/300x300">
+                  <ion-button expand="full">Add to Cart</ion-button>
+                </ion-card-content>
+              </ion-card-header>
+            </ion-card>
+          </div>
+        </ion-slide>
+        <ion-slide>
+            <div>
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title>
+                    Test Product - 250
+                  </ion-card-title>
+                  <ion-card-content>
+                    <img src="https://via.placeholder.com/300x300">
+                    <ion-button expand="full">Add to Cart</ion-button>
+                  </ion-card-content>
+                </ion-card-header>
+              </ion-card>
+            </div>
+        </ion-slide>
+        <ion-slide>
+            <div>
+              <ion-card>
+                <ion-card-header>
+                  <ion-card-title>
+                    Test Product - 250
+                  </ion-card-title>
+                  <ion-card-content>
+                    <img src="https://via.placeholder.com/300x300">
+                    <ion-button expand="full">Add to Cart</ion-button>
+                  </ion-card-content>
+                </ion-card-header>
+              </ion-card>
+            </div>
+        </ion-slide>
+      </ion-slides>
+      <!-- END - Sliding Content -->
 </ion-content>

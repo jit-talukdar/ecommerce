@@ -10,7 +10,7 @@
                 </ion-avatar>
                 <ion-label>
                   <ion-text color="light">
-                    <h1><strong>Company Logo</strong></h1>
+                    <h2><strong>Company Logo</strong></h2>
                     <small>Welcome, {{userName}}</small>
                   </ion-text>
                 </ion-label>
@@ -40,7 +40,7 @@
             </ion-toolbar>
       </ion-header>
       <ion-content>
-        <ion-list>
+        <ion-list lines="none">
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
               <ion-icon slot="start" [name]="p.icon"></ion-icon>

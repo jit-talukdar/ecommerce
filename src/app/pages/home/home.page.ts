@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  slideOpts = {
+    effect: 'flip'
+  };
+  sliderConfig = {
+    slidesPerView: 1.8,
+    spaceBetween: 2,
+    centeredSlides: false
+  };
 }
