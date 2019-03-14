@@ -19,19 +19,19 @@
                 <ion-col size="6">
                     <ion-menu-toggle auto-hide="false">
                         <ion-button *ngIf="!isLoggedIn"  color="secondary" expand="block">
-                          <ion-icon slot="start" name="log-in"></ion-icon>
+                          <ion-icon  slot="start" name="log-in"></ion-icon>
                           Sign In
                         </ion-button>
                         <ion-button *ngIf="isLoggedIn"  color="secondary" expand="block">
-                          <ion-icon slot="start" name="contact"></ion-icon>
+                          <ion-icon size="small" slot="start" name="contact"></ion-icon>
                           Account
                         </ion-button>
                     </ion-menu-toggle>
                 </ion-col>
                 <ion-col size="6">
                     <ion-menu-toggle auto-hide="false">
-                        <ion-button color="secondary" expand="block">
-                            <ion-icon slot="start" name="cart"></ion-icon>
+                        <ion-button align-self color="secondary" expand="block">
+                            <ion-icon size="small" slot="start" name="cart"></ion-icon>
                             Orders
                         </ion-button>
                     </ion-menu-toggle>

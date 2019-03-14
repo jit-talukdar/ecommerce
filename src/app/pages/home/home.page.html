@@ -8,7 +8,7 @@
         </ion-title>
         <ion-buttons slot="end">
             <ion-button>
-              <ion-badge color="secondary">1</ion-badge>
+              <ion-badge class="cartItem" color="secondary">{{cartItems}}</ion-badge>
               <ion-icon slot="icon-only" name="cart"></ion-icon>
             </ion-button>
           </ion-buttons>
@@ -16,126 +16,104 @@
 </ion-header>
 
 <ion-content no-padding>
-    <!-- START -- Image Slider -->
+    <!-- START -- Banner Slider -->
     <ion-slides pager="true" [options]="slideOpts">
         <ion-slide>
-            <img src="assets/sliders/slide1.jpg" style="max-height: 350px;" height="350">
+            <img src="https://via.placeholder.com/950x540" height="350">
         </ion-slide>
         <ion-slide>
-            <img src="assets/sliders/slide2.jpg" style="max-height: 350px;" height="350">
+            <img src="https://via.placeholder.com/950x540" height="350">
+        </ion-slide>
+        <ion-slide>
+            <img src="https://via.placeholder.com/950x540" height="350">
+        </ion-slide>
+        <ion-slide>
+            <img src="https://via.placeholder.com/950x540" height="350">
         </ion-slide>
     </ion-slides>
-    <!-- END -- Image Slider -->
+    <!-- END -- Banner Slider -->
+    <!-- START - Item Divider -->
+    <ion-item-divider color="light">
+        <ion-label>Featured Categories</ion-label>
+        <ion-button class="ion-margin-end" size="small" slot="end" color="secondary" fill="outline">View</ion-button>
+      </ion-item-divider>
+    <!-- END - Item Divider -->
+    <!-- START - Category Grid -->
+      <ion-grid no-padding>
+        <ion-row>
+            <ion-col size="4">
+              <img src="https://via.placeholder.com/300x300">
+            </ion-col>
+            <ion-col size="4">
+                <img src="https://via.placeholder.com/300x300">
+            </ion-col>
+            <ion-col size="4">
+                <img src="https://via.placeholder.com/300x300">
+            </ion-col>
+            <ion-col size="4">
+                <img src="https://via.placeholder.com/300x300">
+            </ion-col>
+            <ion-col size="4">
+                <img src="https://via.placeholder.com/300x300">
+            </ion-col>
+            <ion-col size="4">
+                <img src="https://via.placeholder.com/300x300">
+            </ion-col>
+          </ion-row>
+      </ion-grid>
+    <!-- END - Category Grid -->
     
     <!-- START - Sliding Content -->
     <!-- START - Item Divider -->
-    <ion-item-divider color="light">
+      <ion-item-divider color="light">
         <ion-label>Trending</ion-label>
-        <ion-button size="small" slot="end" color="secondary" fill="outline">View</ion-button>
+        <ion-button class="ion-margin-end" size="small" slot="end" color="secondary" fill="outline">View</ion-button>
       </ion-item-divider>
     <!-- END - Item Divider -->
     <!-- START - Sliding Content -->
-    <ion-slides no-padding [options]="sliderConfig">
+    <ion-slides [options]="sliderConfig">
       <ion-slide>
-        <div>
+        <ion-card>
+          <img src="https://via.placeholder.com/300x300">
+          <ion-card-header>
+              <ion-card-title>Prototype</ion-card-title>
+              <ion-card-subtitle>Rs. 250</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+              <ion-button expand="block" size="small" (click)="addCart()">
+                Add Cart
+              </ion-button> 
+          </ion-card-content>
+      </ion-card>
+      </ion-slide>
+      <ion-slide>
           <ion-card>
+            <img src="https://via.placeholder.com/300x300">
             <ion-card-header>
-              <ion-card-title>
-                Test Product - 250
-              </ion-card-title>
-              <ion-card-content>
-                <img src="https://via.placeholder.com/300x300">
-                <ion-button expand="full">Add to Cart</ion-button>
-              </ion-card-content>
+                <ion-card-title>Prototype</ion-card-title>
+                <ion-card-subtitle>Rs. 250</ion-card-subtitle>
             </ion-card-header>
-          </ion-card>
-        </div>
+            <ion-card-content>
+                <ion-button expand="block" size="small" (click)="addCart()">
+                    Add Cart
+                  </ion-button>
+            </ion-card-content>
+        </ion-card>
       </ion-slide>
       <ion-slide>
-          <div>
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title>
-                  Test Product - 250
-                </ion-card-title>
-                <ion-card-content>
-                  <img src="https://via.placeholder.com/300x300">
-                  <ion-button expand="full">Add to Cart</ion-button>
-                </ion-card-content>
-              </ion-card-header>
-            </ion-card>
-          </div>
-      </ion-slide>
-      <ion-slide>
-          <div>
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title>
-                  Test Product - 250
-                </ion-card-title>
-                <ion-card-content>
-                  <img src="https://via.placeholder.com/300x300">
-                  <ion-button expand="full">Add to Cart</ion-button>
-                </ion-card-content>
-              </ion-card-header>
-            </ion-card>
-          </div>
-      </ion-slide>
+          <ion-card>
+            <img src="https://via.placeholder.com/300x300">
+            <ion-card-header>
+                <ion-card-title>Prototype</ion-card-title>
+                <ion-card-subtitle>Rs. 250</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-button expand="block" size="small" (click)="addCart()">
+                    Add Cart
+                  </ion-button>
+            </ion-card-content>
+        </ion-card>
+        </ion-slide>
     </ion-slides>
     <!-- END - Sliding Content -->
-    <!-- START - Item Divider -->
-    <ion-item-divider color="light">
-        <ion-label>Trending</ion-label>
-        <ion-button size="small" slot="end" color="secondary" fill="outline">View</ion-button>
-      </ion-item-divider>
-    <!-- END - Item Divider -->
-    <!-- START - Sliding Content -->
-      <ion-slides no-padding [options]="sliderConfig">
-        <ion-slide>
-          <div>
-            <ion-card>
-              <ion-card-header>
-                <ion-card-title>
-                  Test Product - 250
-                </ion-card-title>
-                <ion-card-content>
-                  <img src="https://via.placeholder.com/300x300">
-                  <ion-button expand="full">Add to Cart</ion-button>
-                </ion-card-content>
-              </ion-card-header>
-            </ion-card>
-          </div>
-        </ion-slide>
-        <ion-slide>
-            <div>
-              <ion-card>
-                <ion-card-header>
-                  <ion-card-title>
-                    Test Product - 250
-                  </ion-card-title>
-                  <ion-card-content>
-                    <img src="https://via.placeholder.com/300x300">
-                    <ion-button expand="full">Add to Cart</ion-button>
-                  </ion-card-content>
-                </ion-card-header>
-              </ion-card>
-            </div>
-        </ion-slide>
-        <ion-slide>
-            <div>
-              <ion-card>
-                <ion-card-header>
-                  <ion-card-title>
-                    Test Product - 250
-                  </ion-card-title>
-                  <ion-card-content>
-                    <img src="https://via.placeholder.com/300x300">
-                    <ion-button expand="full">Add to Cart</ion-button>
-                  </ion-card-content>
-                </ion-card-header>
-              </ion-card>
-            </div>
-        </ion-slide>
-      </ion-slides>
-      <!-- END - Sliding Content -->
 </ion-content>

@@ -13,3 +13,10 @@
 .bgColor {
     --ion-background-color: var(--light, #f4f5f8) !important;
   }
+
+.cartItem {
+  position: absolute;
+  top: 12px;
+  right: 0px;
+  border-radius: 100%;
+}

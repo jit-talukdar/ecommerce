@@ -1,12 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      List
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            List
+        </ion-title>
+        <ion-buttons slot="end">
+            <ion-button>
+              <ion-badge class="cartItem" color="secondary">{{cartItems}}</ion-badge>
+              <ion-icon slot="icon-only" name="cart"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
